@@ -1,0 +1,396 @@
+.admin-contacts-page-wrap {
+  overflow:hidden;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CATEGORIES-----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.admin-contacts-page-wrap .categories-tree {
+  float:left;
+  width:260px;
+  padding:25px 0 0 20px;
+}
+.admin-contacts-page-wrap .categories-tree a {
+  display:inline-block;
+  color:#314A51;
+  font-family:"proxima_novasemibold";
+}
+.admin-contacts-page-wrap .categories-tree a:hover {
+  text-decoration:none;
+}
+.admin-contacts-page-wrap .categories-tree span {
+  float:right;
+  font-size:12px;
+  margin:8px 10px 0 0;
+}
+.admin-contacts-page-wrap .categories-tree > ul > li > span {
+  margin-top:5px;
+}
+.admin-contacts-page-wrap .categories-tree ul ul {
+  margin:0 0 0 10px;
+}
+.admin-contacts-page-wrap .categories-tree > ul > li > a {
+  padding:2px 0 5px 2px;
+}
+.admin-contacts-page-wrap .categories-tree > ul > li > a > .jstree-icon {
+  background:url(../images/new/main_folder_icon.png) 0 0 no-repeat;
+}
+.admin-contacts-page-wrap .categories-tree ul ul li a {
+  padding:6px 0 6px 0;
+}
+.admin-contacts-page-wrap .categories-tree .active {
+  background-color:#EAEDED;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.admin-contacts-page-wrap .content {
+  overflow:hidden;
+  border-left:1px solid #E5E5E5;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FILTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.admin-contacts-page-wrap .content .filters-list {
+  overflow:hidden;
+  padding:10px 20px 10px 20px;
+}
+.admin-contacts-page-wrap .content .filters-list a {
+  font-family:"proxima_novasemibold";
+}
+.admin-contacts-page-wrap .content .filters-list .btn {
+  display:block;
+  padding:5px 10px 3px;
+  border:1px solid #DADADA;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.admin-contacts-page-wrap .content .filters-list .btn:hover {
+  text-decoration:none;
+}
+.admin-contacts-page-wrap .content .filters-list li {
+  margin:0 5px;
+}
+.admin-contacts-page-wrap .content .filters-list .search .input-wrap {
+  border:1px solid #DADADA;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding:4px 10px 3px;
+}
+.admin-contacts-page-wrap .content .filters-list .search .input-wrap input[type='text'] {
+  border:0;
+  width:120px;
+}
+.admin-contacts-page-wrap .content .filters-list .search .input-wrap i {
+  font-size:14px;
+  color:#77BDD1;
+  vertical-align:middle;
+}
+.admin-contacts-page-wrap .content .filters-list .sort {
+  padding:8px 0 0;
+}
+.admin-contacts-page-wrap .content .filters-list .sort i {
+  vertical-align:middle;
+  font-size:16px;
+}
+.admin-contacts-page-wrap .content .filters-list .view a {
+  float:left;
+  padding-left:7px;
+  padding-right:7px;
+}
+.admin-contacts-page-wrap .content .filters-list .view a:first-child {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.admin-contacts-page-wrap .content .filters-list .view a:last-child {
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.admin-contacts-page-wrap .content .filters-list .view a:last-child:not(.active) {
+  border-left:0;
+}
+.admin-contacts-page-wrap .content .filters-list .view a:first-child:not(.active) {
+  border-right:0;
+}
+.admin-contacts-page-wrap .content .filters-list .view .active {
+  background:#F1F8FA;
+  border-color:#B3B9BB;
+  color:#2E4A51;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------TABLE----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.admin-contacts-page-wrap .content .contacts-table {
+  width:100%;
+}
+.admin-contacts-page-wrap .content .contacts-table thead td {
+  background:#F5F6F7;
+  color:#77BDD1;
+  font-size:12px;
+  font-family:"proxima_novasemibold";
+  padding:15px 10px;
+}
+.admin-contacts-page-wrap .content .contacts-table thead td i {
+  font-size:14px;
+  color:#314A51;
+  vertical-align:middle;
+}
+.admin-contacts-page-wrap .content .contacts-table .name {
+  width:25%;
+}
+.admin-contacts-page-wrap .content .contacts-table .company {
+  width:25%;
+}
+.admin-contacts-page-wrap .content .contacts-table .segment {
+  width:10%;
+}
+.admin-contacts-page-wrap .content .contacts-table .location {
+  width:10%;
+}
+.admin-contacts-page-wrap .content .contacts-table .email {
+  width:20%;
+}
+.admin-contacts-page-wrap .content .contacts-table .actions {
+  width:10%;
+}
+.admin-contacts-page-wrap .content .contacts-table td {
+  border-top:1px solid #EAEDEE;
+  padding:10px; 
+  font-size:12px;
+}
+.admin-contacts-page-wrap .content .contacts-table td a {
+  font-size:12px;
+}
+.admin-contacts-page-wrap .content .contacts-table tr:nth-child(2n+0) td {
+  background:#F9FAFB;  
+}
+.admin-contacts-page-wrap .content .contacts-table .active td {
+  background:#DEE8EB !important;
+}
+.admin-contacts-page-wrap .content .contacts-table .actions a {
+  font-size:14px;
+  color:#FF7043;
+  margin:0 10px 0 0;
+}
+.admin-contacts-page-wrap .content .contacts-table .actions a:hover {
+  text-decoration:none;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------ADD CONTACT POPUP----------------------------*/
+/*----------------------------------------------------------------------------------*/
+.contact-form-popup {
+  width:450px;
+  position:relative;
+  overflow:hidden;
+  padding:20px;
+}
+.contact-form-popup .close-btn {
+  position:absolute;
+  right:10px;
+  top:10px;
+  font-size:16px;
+  color:#fff;
+}
+.contact-form-popup .close-btn:hover {
+  text-decoration:none;
+}
+.contact-form-popup h2 {
+  background:#77BDD1;
+  color:#fff;
+  font-size:18px;
+  font-family:"proxima_novasemibold";
+  padding:15px 20px;
+  margin:-20px -20px 20px;
+  font-weight:normal;
+}
+.contact-form-popup fieldset {
+  margin:0 0 10px;
+  border-bottom:1px dotted #DADADA;
+}
+.contact-form-popup .form-list {
+  overflow:hidden;
+  margin:0 0 0 -10px;
+}
+.contact-form-popup .form-list li {
+  margin:0 0 10px 10px;
+}
+.contact-form-popup .form-list .half {
+  float:left;
+  width:220px;
+}
+.contact-form-popup .form-list .small {
+  float:left;
+  width:150px;
+}
+.contact-form-popup .form-list .super-small {
+  float:left;
+  width:60px;
+}
+.contact-form-popup .form-list li input {
+  width:438px;
+  border:1px solid #DADADA;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding:5px;
+  color:#878787; 
+}
+.contact-form-popup .form-list .half input {
+  width:208px;
+}
+.contact-form-popup .form-list .small input {
+  width:138px;  
+}
+.contact-form-popup .form-list .super-small input {
+  width:48px;
+}
+.contact-form-popup .button-list {
+  overflow:hidden;
+  margin:20px 0 0 -10px;
+}
+.contact-form-popup .button-list li {
+  float:left;
+  width:220px;
+  margin:0 0 0 10px;
+}
+.contact-form-popup .button-list li a {
+  display:block;
+  background:#77BDD1;
+  border:1px solid #66A2B3;
+  color:#fff;
+  font-family:"proxima_novasemibold";
+  text-align:center;
+  padding:7px 0 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.contact-form-popup .button-list li a i {
+  vertical-align:middle;
+}
+.contact-form-popup .button-list li a:hover {
+  text-decoration:none;
+}
+.contact-form-popup .button-list .white-btn a {
+  background:#fff;
+  color:#77BDD1;
+  border:1px solid #DADADA;
+}
+.contact-form-popup .button-list .delete-btn a {
+  background:#fff;
+  color:#FF7043;
+  border:1px solid #DADADA;
+}
+.contact-form-popup .button-list .small-btn {
+  float:right;
+  width:100px;
+}
+.contact-form-popup .button-list .delete-btn {
+  float:left;
+}
+.contact-form-popup .details-wrap {
+  overflow:hidden;
+  border-bottom:1px solid #DADADA;
+  padding:0 0 20px;
+}
+.contact-form-popup .details-wrap .edit-btn {
+  float:right;
+  color:#FF7043;
+}
+.contact-form-popup .details-wrap .edit-btn:hover {
+  text-decoration:none;
+}
+.contact-form-popup .details-wrap span {
+  display:block;
+  overflow:hidden;
+  color:#A5B0B3;
+}
+.contact-form-popup .details-wrap h3 {
+  font-size:28px;
+  font-weight:normal;
+}
+.contact-form-popup .details-wrap ul {
+  margin:20px 0 0;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------TREE-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#vakata-dragged {
+    display: block;
+    padding: 4px 4px 4px 24px;
+    position: absolute;
+    top: -2000px;
+    z-index: 10000;
+}
+#jstree-marker {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    overflow: hidden;
+    height: 12px;
+    width: 8px;
+    position: absolute;
+    top: -30px;
+    z-index: 10001;
+    background-repeat: no-repeat;
+    display: none;
+    background-color: transparent;
+    text-shadow: 1px 1px 1px white;
+    color: black;
+    line-height: 10px;
+}
+#jstree-marker-line {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    font-size: 1px;
+    overflow: hidden;
+    height: 1px;
+    width: 100px;
+    position: absolute;
+    top: -30px;
+    z-index: 10000;
+    background-repeat: no-repeat;
+    display: none;
+    background-color: #456c43;
+    cursor: pointer;
+    border: 1px solid #eeeeee;
+    border-left: 0;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+.categories-tree ins {
+    display: inline-block;
+    text-decoration: none;
+    width: 18px;
+    height: 18px;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+.categories-tree a > ins.jstree-icon {
+    background: url("../images/new/folder_icon.png") no-repeat;
+    width: 25px;
+    height: 20px;
+    margin-right: 6px;
+}
+.draggable-folder {
+    position: absolute;
+    top: 0;
+    left: -20px;
+}
+.draggable-folder .categories-tree {
+    padding: 0;
+}
+.draggable-folder li > span {
+    display: none;
+}

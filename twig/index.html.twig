@@ -1,0 +1,150 @@
+{% extends "::admin_base.html.twig" %}
+
+{% block page_title %}Homepage{% endblock %}
+
+{% block content_title %}Manage Your Homepage{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/admin_landing_page.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/admin_jquery_fancybox.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+
+  {% javascripts
+    'js/jquery-1.10.1.min.js'
+    'js/fancybox/jquery.fancybox.pack.js'
+  %}
+  <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+
+  {% javascripts
+    '@TagAdminBundle/Resources/public/js/landing/admin_landing.js'
+  %}
+  <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+{% endblock %}
+
+{% block content_top_nav %}
+  <ul class="nav">
+    <li><a href="#">view homepage</a></li>
+  </ul>    
+{% endblock %}
+
+{% block content %}
+  <div class="admin-landing-page-wrap">
+    <div class="homepage-wrap">
+      <div class="header">
+        <a href="{{ path("home") }}" class="logo"><img src="/images/new/header_logo.png" width="138" height="32" alt="Tagible" /></a>
+          
+        <ul class="nav">
+          <li class="user"><i class="flaticon stroke user-4"></i><a href="#">Judah Musick</a><i class="flaticon stroke down-1"></i></li>
+        </ul>
+        
+        <ul class="social-list">
+          <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+        </ul>
+        
+        <form action="" method="post">
+          <fieldset class="search-wrap">
+            <input type="text" placeholder="Search" />
+            <i class="flaticon stroke zoom-2"></i>
+          </fieldset>
+        </form>
+      </div>
+      
+      <div class="content">
+        <div class="popular-channels-list">
+          <h3>Popular Channels</h3>
+          <ul>
+            <li>
+              <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+              <img src="/images/new/channel_small_preview.jpg" alt="Image" />
+              <h4><a href="#">Music Box</a></h4>
+              <span>36 videos</span>
+            </li>
+            <li>
+              <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+              <img src="/images/new/channel_small_preview.jpg" alt="Image" />
+              <h4><a href="#">Music Box</a></h4>
+              <span>36 videos</span>
+            </li>
+            <li>
+              <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+              <img src="/images/new/channel_small_preview.jpg" alt="Image" />
+              <h4><a href="#">Music Box</a></h4>
+              <span>36 videos</span>
+            </li>
+            <li>
+              <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+              <img src="/images/new/channel_small_preview.jpg" alt="Image" />
+              <h4><a href="#">Music Box</a></h4>
+              <span>36 videos</span>
+            </li>
+            <li>
+              <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+              <img src="/images/new/channel_small_preview.jpg" alt="Image" />
+              <h4><a href="#">Music Box</a></h4>
+              <span>36 videos</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="video-box">
+          <h3>Collect, Organaize & Share Remarkable Video <a href="#" class="edit-link-inline"><i class="flaticon stroke pencil-1"></i></a></h3>
+          <div class="video-wrap">
+            <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+          </div>
+        </div>
+        
+        <h3>Featured Channels</h3>
+        <ul class="featured-list">
+          <li>
+            <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+            <a href="#"><img src="/images/new/featured_channel_image.jpg" alt="Image" /></a>
+            <div class="info-wrap">
+              <h4><a href="#">MusicBox</a></h4>
+              <span>36 videos</span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+            <a href="#"><img src="/images/new/featured_channel_image.jpg" alt="Image" /></a>
+            <div class="info-wrap">
+              <h4><a href="#">MusicBox</a></h4>
+              <span>36 videos</span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+            <a href="#"><img src="/images/new/featured_channel_image.jpg" alt="Image" /></a>
+            <div class="info-wrap">
+              <h4><a href="#">MusicBox</a></h4>
+              <span>36 videos</span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+            <a href="#"><img src="/images/new/featured_channel_image.jpg" alt="Image" /></a>
+            <div class="info-wrap">
+              <h4><a href="#">MusicBox</a></h4>
+              <span>36 videos</span>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="edit-link"><i class="flaticon stroke pencil-1"></i></a>
+            <a href="#"><img src="/images/new/featured_channel_image.jpg" alt="Image" /></a>
+            <div class="info-wrap">
+              <h4><a href="#">MusicBox</a></h4>
+              <span>36 videos</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}
