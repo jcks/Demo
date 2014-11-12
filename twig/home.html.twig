@@ -1,0 +1,84 @@
+{% extends '::frontend_base.html.twig' %}
+
+{% block page_title %}Home Page{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/frontend_homepage.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts
+      'js/jquery-1.10.1.min.js'
+      'js/vendors/jquery.jcarousel.min.js'
+      'js/vendors/jquery.swfobject.1-1-1.min.js'
+      'js/vendors/player/jquery.yt-player.js'
+      '@TagAppBundle/Resources/public/js/player-in-carousel.js'
+      'js/vendors/jquery-cookie/jquery.cookie.js'
+      '@TagAppBundle/Resources/public/js/is_visited.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="popular-channels-list">
+    <h3>Popular Channels</h3>
+    <ul>
+      {% for list in popularLists %}
+      <li>
+        <a href="{{ list['url'] }}"><img src="{{ list['image'] }}" alt="Image" width="70" height="53" /></a>
+        <h4><a href="{{ list['url'] }}">{{ list['title'] }}</a></h4>
+        <span>{{ list['count'] }} video{% if list['count'] > 1 %}s{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+    
+  <div class="video-box">
+    <h3>Collect, Organaize & Share Remarkable Video</a></h3>
+    <div class="video-wrap">
+      <div id="myCarousel" class="jcarousel">
+        <ul>
+          {% for item in announcementList %}
+            <li>
+              <img src="{{ item.amazonImage }}" alt="{{ item.title }}" />
+              <div class="info">
+                <h2>{{ item.title }}</h2>
+                {% if announcementList|length > 1 %}
+                  <ul class="carousel-indicators">
+                    {% for i in 0..announcementList|length-1 %}
+                      <li {% if loop.first %}class="active"{% endif %} data-target="#myCarousel" data-slide-to="{{ i }}"></li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+              </div>
+            </li>
+          {% endfor %}  
+        </ul>
+      </div>
+      <a href="#" class="play-btn"></a>
+    </div>
+  </div>
+    
+  <h3>Featured Channels</h3>
+  <ul class="featured-list">
+    {% for featured in features %}
+      {% if featured['count'] > 0 %}
+        <li>
+          <a href="{{ featured['url'] }}"><img src="{{ featured['image'] }}" alt="Image" width="200" height="150" /></a>
+          <div class="info-wrap">
+            <h4><a href="{{ featured['url'] }}">{{ featured['title'] }}</a></h4>
+            <span>{{ featured['count'] }} video{% if featured['count'] > 1 %}s{% endif %}</span>
+          </div>
+        </li>
+      {% endif %}
+    {% else %}
+        <li>No Tags</li>
+    {% endfor %}
+  </ul>
+  
+  <div class="no-display" id="player-tpl">
+      {{ include('TagAppBundle:Main:parts/videoPlayer.html.twig', {ranged: true}) }}
+  </div>
+{% endblock %}

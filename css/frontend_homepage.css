@@ -1,0 +1,175 @@
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------POPULAR CHANNELS-----------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrap .popular-channels-list {
+  float:right;
+  width:220px;
+  margin:0 0 0 20px;
+}
+.wrap .popular-channels-list ul {
+  overflow:hidden;
+}
+.wrap .popular-channels-list ul li {
+  margin:0 0 24px;
+  background:#2E4A51;
+  position:relative;
+  height:53px;
+  overflow:hidden;
+}
+.wrap .popular-channels-list ul li img {
+  float:left;
+  margin:0 10px 0 0;
+}
+.wrap .popular-channels-list ul li .edit-link {
+  position:absolute;
+  left:45px;
+  top:5px;
+}
+.wrap .popular-channels-list ul li h4 {
+  overflow:hidden;
+  margin:7px 5px 0 0;
+  line-height:1.0;
+}
+.wrap .popular-channels-list ul li h4 a {
+  color:#fff;
+  font-size:14px;
+  font-family:"proxima_novasemibold";
+  font-weight:normal;
+}
+.wrap .popular-channels-list ul li span {
+  display:block;
+  overflow:hidden;
+  color:#A2AEB1;
+  font-size:12px;
+  font-family:"proxima_novasemibold";
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------VIDEO BOX------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrap .video-box {
+  overflow:hidden;
+  padding:0 0 40px;
+}
+.wrap .video-box .video-wrap {
+  overflow:hidden;
+  min-height:360px;
+  position:relative;
+}
+.wrap .video-box .video-wrap .edit-link {
+  position:absolute;
+  right:5px;
+  top:5px;
+}
+.wrap .video-box .video-wrap .play-btn {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:80px;
+  height:80px;
+  margin:-40px 0 0 -40px;
+  background:url(../images/new/play_btn.png) 0 0 no-repeat;
+}
+.wrap .content h3 {
+  font-size:18px;
+  font-family:"proxima_novasemibold";
+  color:#314A51;
+  margin:0 0 15px;
+  font-weight:normal;
+}
+.wrap .edit-link {
+  display:block;
+  width:22px;
+  height:18px;
+  color:#FF7043;
+  background:rgba(255,255,255, 0.7);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align:center;
+  padding:4px 0 0;
+}
+.wrap .edit-link:hover,
+.wrap .edit-link-inline:hover {
+  text-decoration:none;
+}
+.wrap .edit-link-inline {
+  color:#FF7043;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FEATURED CHANNELS----------------------------*/
+/*----------------------------------------------------------------------------------*/
+.wrap .featured-list {
+  overflow:hidden;
+  margin:-20px 0 0 -25px;
+}
+.wrap .featured-list li {
+  float:left;
+  width:200px;
+  height:150px;
+  margin:20px 0 0 25px;
+  position:relative;
+}
+.wrap .featured-list li .edit-link {
+  position:absolute;
+  right:10px;
+  top:10px;
+}
+.wrap .featured-list li img {
+  display:block;
+}
+.wrap .featured-list li .info-wrap {
+  width:170px;
+  position:absolute;
+  left:0;
+  bottom:0;
+  background:rgba(46,74,81, 0.7);
+  padding:12px 15px;
+}
+.wrap .featured-list li .info-wrap h4 {
+  line-height:1.0;
+}
+.wrap .featured-list li .info-wrap h4 a {
+  font-size:14px;
+  color:#fff;
+  font-family:"proxima_novasemibold";
+  font-weight:normal;
+}
+.wrap .featured-list li .info-wrap span {
+  color:#A2AEB1;
+  font-size:12px;
+  font-family:"proxima_novasemibold";
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CAROUSEL-------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+}
+.jcarousel > ul {
+  width: 20000em;
+  position: relative;
+}
+.jcarousel > ul > li {
+  width:640px;
+  height:360px;
+  float: left;
+  position:relative;
+}
+.jcarousel > ul > li > img {
+  display:block;
+}
+.jcarousel > ul > li .info {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:url(../images/new/blue_bg.png);
+  padding:15px 0;
+}
+.jcarousel > ul > li .info h2 {
+  font-size:24px;
+  color:#fff;
+  font-weight:normal;
+  margin:0 15px;
+}

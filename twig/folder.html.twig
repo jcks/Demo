@@ -1,0 +1,85 @@
+{% extends '::frontend_base.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('css/frontend_channel.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+  {{  parent() }}
+  
+  {% javascripts
+    'js/jquery-1.10.1.min.js'
+    'js/vendors/jquery.jcarousel.min.js'
+    'js/vendors/jquery.swfobject.1-1-1.min.js'
+    'js/vendors/player/jquery.yt-player.js'
+    '@TagAppBundle/Resources/public/js/playFolder.js'
+    'js/vendors/fancybox/jquery.fancybox.pack.js'
+  %}
+  <script src="{{ asset_url }}"></script>
+  {% endjavascripts %}
+    
+  <script type="text/javascript">
+    window.FolderPlayer.init({
+      width: 600,
+      height: 338,
+      start_plaing: {{ play }}
+    });
+  </script>
+{% endblock %}
+
+{% block page_title %}{% if model['folder'] %}{{ model['folder'].title }}{% else %}Videos{% endif %}{% endblock %}
+
+{% block content %}
+
+  <ul class="breadcrumbs">
+      {% for item in breadcrumbs %}
+          <li {% if item['is_active'] %}class="active"{% endif %}><i class="fa fa-angle-right"></i><a href="{{ item['link'] }}">{{ item['title'] }}</a></li>
+      {% endfor %}
+  </ul>
+
+  <div class="video-wrap">
+    <div class="info-block">
+      <h1>Channel Title</h1>
+      <span>36 videos</span>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+      <a href="#" class="action-btn"><span><i class="flaticon stroke basket-1"></i></span>Shop Now</a>
+    </div>
+    
+    {{ include('TagAppBundle:Main:parts/videoPlayer.html.twig', {ranged: true}) }}
+  </div>
+  
+  {% if model['folder'] %}
+    {{ include("TagAppBundle:Video:folder_carusel.html.twig", {
+      'id' : model['folder'].id,
+      'videos' : model['videos'],
+      'count': model['count'],
+      'start': model['start'],
+      'main': true,
+      'link': ''
+    }) }}
+  {% endif %}
+  
+  <div class="channels-wrap">
+    <ul class="tabs">
+      <li class="active"><a href="#">Channels</a></li>
+      <li class="no-display"><a href="#">Favorities</a></li>
+      <li class="no-display"><a href="#"><i class="flaticon stroke zoom-2"></i></a></li>
+    </ul>
+    
+    {% if model['folders'] %}
+      <ul class="channels-list">
+        {% for folder in model['folders'] %}
+          {% set link = url('folder_view', {'path': [path, '/', folder['folder'].slug]|join}) %}
+          <li>
+            <a href="{{ link }}"><img src="/images/new/featured_channel_image.jpg" alt="Image" width="200" height="150" /></a>
+            <div class="info-wrap">
+              <h3><a href="{{ link }}">{{ folder['folder'].title }}</a></h3>
+              <span>{{ folder['count'] }} video{% if folder['count'] > 1 %}s{% endif %}</span>
+            </div>
+          <li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+{% endblock %}
